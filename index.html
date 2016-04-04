@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Spider | String manipulation language</title>
+    <link type="text/css" rel="stylesheet" href="Style.css" />
+    <script type="text/javascript" src="Spider.js"></script>
+</head>
+
+<body style="text-align: center;">
+<h1>Spider</h1>
+<h2>A string manipulation language</h2>
+<div id="left">
+    <textarea id="input" rows="1" cols="70" placeholder="Input">Input String</textarea><br/>
+    <textarea id="code" rows="25" cols="70" placeholder="Code">o</textarea><br/>
+    <textarea id="output" rows="5" cols="70" placeholder="Output"></textarea><br/>
+    <div id="buttons">
+        <input type="button" value="Run" onclick="run();" />
+    </div>
+</div>
+
+
+<div id="right">
+    <p>Ranges are inclusive. Also, if a range's end is not given, the range will end at the end of the string.</p>
+    <table id="table">
+        <tr>
+            <th>Char</th>
+            <th>Arguments</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>o</td>
+            <td>None</td>
+            <td>Reverses the string</td>
+        </tr>
+        <tr>
+            <td>d</td>
+            <td>search:&lt;string&gt;</td>
+            <td>Deletes all occurrences of the argument</td>
+        </tr>
+        <tr>
+            <td>D</td>
+            <td>search:&lt;string&gt;, start:&lt;int&gt;, end:[int]</td>
+            <td>Deletes all occurrences of the first argument in the given range</td>
+        </tr>
+        <tr>
+            <td>i</td>
+            <td>start:&lt;int&gt;, end:[int]</td>
+            <td>Deletes all characters in the given range</td>
+        </tr>
+        <tr>
+            <td>I</td>
+            <td>start:&lt;int&gt;, end:[int], replacement:[string]</td>
+            <td>Replaces a given index range with the third argument</td>
+        </tr>
+        <tr>
+            <td>r</td>
+            <td>search:&lt;string&gt;, replacement:&lt;string&gt;</td>
+            <td>Replaces all occurrences of the first argument with the second</td>
+        </tr>
+        <tr>
+            <td>R</td>
+            <td>search:&lt;string&gt;, replacement:&lt;string&gt;, start:&lt;int&gt;, end:[int]</td>
+            <td>Replaces all occurrences of the first argument in the given range with the second</td>
+        </tr>
+        <tr>
+            <td>m</td>
+            <td>search:&lt;string&gt;</td>
+            <td>Removes all occurrences of the given string except for the first</td>
+        </tr>
+        <tr>
+            <td>s</td>
+            <td>replacement:&lt;string&gt; finds:&lt;string[]&gt;</td>
+            <td>Sequential replace - First find is found and replaced, second find is found after first and replaced, etc. If finds is one string, it will be split up into
+                multiple characters as the finds</td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

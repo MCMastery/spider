@@ -1,0 +1,39 @@
+@font-face {
+    font-family: "Sansation";
+    src: url("sansation/Sansation-Regular.ttf");
+}
+
+* {
+    font-family: "Sansation", sans-serif;
+}
+
+
+textarea {
+    resize: none;
+    font-family: monospace;
+}
+
+
+#left {
+    float: left;
+    width: 50%;
+}
+#right {
+    float: right;
+    width: 50%;
+}
+
+
+#table {
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+#table, #table th, #table td {
+    border: 1px solid #777;
+}
+#table th, #table td {
+    padding: 10px;
+}
+#table td:first-child, #table td:nth-child(2) {
+    font-family: monospace;
+}
