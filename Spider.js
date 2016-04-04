@@ -1,5 +1,7 @@
 var input, code, output, string;
 
+var char = "\xA2";
+
 String.prototype.replaceAll = function(search, replacement) {
     var target = this;
     return target.replace(new RegExp(search, 'g'), replacement);
@@ -48,7 +50,7 @@ function sequentialReplace(replace, finds) {
     for (var e = 0; e < string.length; e++) {
         for (var s = 0; s < string.length; s++) {
             if (string.slice(s, e + 1) == finds[find]) {
-                replaceRange(s, e + 1, replace);
+                replaceRange(s, e + 1, replace.replaceAll(char, finds[find]));
                 find++;
             }
         }
@@ -252,5 +254,5 @@ function run() {
     }
     if (insideArgs)
         cmd.run(args.split(","));
-    output.value = string;
+    output.value = string.replaceAll("\\\\n", "\n");
 }
